@@ -136,7 +136,7 @@ Bastion is the commercial product in the **Gateway** layer of [Web 4](https://gi
 node scripts/build-site.mjs   # regenerate site/ from site.config.json + the vendored inputs
 ```
 
-"Committed is not served": the authoritative check runs against the live domain after deploy (`npx @flashyos/conformance <domain> --level 2`). `vercel.json` sets the output directory to `site` with no framework; the canonical base is `https://flashylabs.github.io/bastion/` until the property has its own domain. **Visibility: private-intended** — the repository is meant to stay private, was measured public on 2026-09-28, and stack.json records both facts in its `x-note`.
+"Committed is not served": the authoritative check runs against the live domain after deploy (`npx @flashyos/conformance <domain> --level 2`). `vercel.json` sets the output directory to `site` with no framework; the canonical base is `https://agentelabs.github.io/bastion/` until the property has its own domain. **Visibility: private-intended** — the repository is meant to stay private, was measured public on 2026-09-28, and stack.json records both facts in its `x-note`.
 
 ## Status
 
