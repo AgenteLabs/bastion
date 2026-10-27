@@ -102,7 +102,7 @@ test('every page is in the sitemap and in llms.txt', () => {
   // Base is derived from the committed config, so this generator test is
   // property-agnostic and vendors byte-identical across the estate's siblings.
   const cfg = JSON.parse(read(join(ROOT, 'site.config.json')));
-  const base = cfg.domain ? `https://${cfg.domain}/` : `https://flashylabs.github.io/${cfg.property}/`;
+  const base = cfg.domain ? `https://${cfg.domain}/` : `https://agentelabs.github.io/${cfg.property}/`;
   for (const p of pages) {
     const rel = relPosix(SITE, p).replace(/index\.html$/, '').replace(/\/$/, '');
     const url = base + (rel ? `${rel}/` : '');

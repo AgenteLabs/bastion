@@ -9,7 +9,7 @@
   "repositories": [
     {
       "name": "bastion",
-      "url": "github.com/FlashyLabs/bastion",
+      "url": "github.com/AgenteLabs/bastion",
       "default": true,
       "holds": [
         "product",

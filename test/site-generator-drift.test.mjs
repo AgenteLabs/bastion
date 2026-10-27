@@ -1,6 +1,6 @@
 // The institutional front-door generator is vendored, not forked. build-site.mjs,
 // mesh.mjs and the site-config/1 schema are byte-identical copies of the canonical
-// set in FlashyLabs/web4 (CONTRIBUTING.md, "Vendoring this generator"). This test
+// set in AgenteLabs/web4 (CONTRIBUTING.md, "Vendoring this generator"). This test
 // pins each against that source when the web4 checkout is beside this one, and
 // reports UNKNOWN — never passed — when it is not. Change one of these here and you
 // have forked the door; change it in web4 and re-vendor. node: builtins only.
