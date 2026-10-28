@@ -15,17 +15,11 @@ single entry point through which you reach a protected network. Cloudflare
 sits in front of your site for human traffic; Bastion is that position for
 agent traffic.
 
-**Visibility: private-intended.** This is a commercial product, not a
-protocol; the protocols it implements are the open specs it links to below.
-The repository is meant to stay private. Nothing in it is a standard, and
-nothing a standard needs lives here.
-
-> **Unresolved:** the estate register in flashyos declares this repository
-> Apache-2.0 (holder Flashy Labs), and the tree now matches that. But an
-> Apache-2.0 licence on a repository that was measured public (2026-09-28)
-> is an open grant, which contradicts "meant to stay private". A human must
-> reconcile the two — keep it open, or flip the repo private *and* remove it
-> from the Apache-2.0 line in the register. See CLAUDE.md, *Licence*.
+**Visibility: private. Proprietary, all rights reserved** (decided 2026-10-28).
+This is a commercial product, not a protocol; the protocols it implements are the
+open specs it links to below, and they stay open because open specs create the
+demand. The implementation is what is sold, so it is not published. Nothing in
+this repository is a standard, and nothing a standard needs lives here.
 
 **Status: v0 skeleton, in design.** Read "Implemented and designed" before
 believing any sentence above of the code.
@@ -144,4 +138,4 @@ Status: v0 skeleton, in design; the institutional front door was generated 2026-
 Stages 2–4 of the request path are designed and not built; the code says so
 on every response that reaches them.
 
-Licensed under Apache-2.0 (holder Flashy Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.
+All rights reserved (holder Flashy Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.
