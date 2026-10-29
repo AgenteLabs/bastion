@@ -138,4 +138,4 @@ Status: v0 skeleton, in design; the institutional front door was generated 2026-
 Stages 2–4 of the request path are designed and not built; the code says so
 on every response that reaches them.
 
-All rights reserved (holder Flashy Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.
+All rights reserved (holder Agente Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.

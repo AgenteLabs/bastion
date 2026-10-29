@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const readme = readFileSync(join(ROOT, 'README.md'), 'utf8');
 
-const LICENCE_LINE = 'All rights reserved (holder Flashy Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.';
+const LICENCE_LINE = 'All rights reserved (holder Agente Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.';
 
 test('the H1 is the first line', () => {
   assert.ok(readme.startsWith('# Bastion'), 'the H1 must be the first line');

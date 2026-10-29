@@ -24,7 +24,7 @@ Decided 2026-10-28 by the owner: Bastion is the commercial layer, so the impleme
 proprietary and private, and the specs it implements (`agent/1`, `delegation/1`,
 `pay-policy/1`) stay open in their own repositories. The register in flashyos
 (`estate.register.json`, read by `tools/estate-licences.mjs`) says
-**proprietary, holder Flashy Labs**, and `LICENSE` here is the matching all-rights-reserved
+**proprietary, holder Agente Labs**, and `LICENSE` here is the matching all-rights-reserved
 statement. The licence is still not decided in this repository: change the register and
 this follows.
 
@@ -120,7 +120,7 @@ npm start       # node src/server.mjs examples/operator.config.json  (PORT, HOST
 - **No dependencies, ESM, Node 22, no install in CI, and a LICENSE that
   matches the register.** `package.json` stays `private: true` (an npm-publish
   flag, not a statement about GitHub visibility); the tree carries the
-  all-rights-reserved `LICENSE` naming Flashy Labs, because the estate
+  all-rights-reserved `LICENSE` naming Agente Labs, because the estate
   register decided that (see *Licence* above); CI installs nothing.
   `test/repo.test.mjs` reads `package.json`, the tree and
   `.github/workflows/ci.yml`.
@@ -138,7 +138,7 @@ npm start       # node src/server.mjs examples/operator.config.json  (PORT, HOST
   re-vendor.
 - Add a package. `node:` builtins only; the lint refuses any other specifier.
 - Put a real company, person, domain or price in an example or a test.
-- Decide the licence *here*. It is proprietary, holder Flashy Labs, because
+- Decide the licence *here*. It is proprietary, holder Agente Labs, because
   the flashyos register says so; the `LICENSE` in this tree
   is a copy made to match that register, not a decision taken in this repo.
   Do not change it to anything else here — change the register.

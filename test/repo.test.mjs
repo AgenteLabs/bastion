@@ -23,21 +23,21 @@ test('package.json: private, ESM, Node 22, no dependencies of any kind', () => {
   assert.ok(!existsSync(join(ROOT, 'node_modules')), 'nothing to install, nothing installed');
 });
 
-test('LICENSE is present and is an all-rights-reserved statement held by Flashy Labs, as the flashyos register declares', () => {
+test('LICENSE is present and is an all-rights-reserved statement held by Agente Labs, as the flashyos register declares', () => {
   // The estate licence register (flashyos estate.register.json) is the authority;
-  // it names this repository proprietary, holder Flashy Labs. The licence is not
+  // it names this repository proprietary, holder Agente Labs. The licence is not
   // decided here: it is made to match what the register decided.
   assert.ok(existsSync(join(ROOT, 'LICENSE')), 'LICENSE must exist');
   const licence = read('LICENSE');
   assert.doesNotMatch(licence, /Apache License/i, 'this repository is no longer Apache-2.0');
-  assert.match(licence.trimStart(), /^Copyright \(C\) 2026 Flashy Labs\. All rights reserved\./, 'LICENSE must name the holder the register declares');
+  assert.match(licence.trimStart(), /^Copyright \(C\) 2026 Agente Labs\. All rights reserved\./, 'LICENSE must name the holder the register declares');
   assert.match(licence, /No licence is granted/);
 });
 
 test('README ends on the exact licence line and carries the status and visibility lines', () => {
   const readme = read('README.md');
   const lines = readme.trimEnd().split('\n');
-  assert.equal(lines.at(-1), 'All rights reserved (holder Flashy Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.');
+  assert.equal(lines.at(-1), 'All rights reserved (holder Agente Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.');
   assert.ok(readme.includes('Status: v0 skeleton, in design'));
   assert.ok(readme.includes('Visibility: private.'));
 });
