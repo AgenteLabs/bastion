@@ -6,7 +6,7 @@ interface in front of it: `/.well-known/agent` derived from config, callers
 authenticated by `delegation/1` chains, calls gated by `pay-policy/1`, a
 receipt per action. Node 22, ESM, `node:` builtins only, nothing to install.
 
-**Visibility: private-intended.** This is a commercial product, not a
+**Visibility: private. Proprietary (decided 2026-10-28).** This is a commercial product, not a
 protocol; the protocols it implements are the open specs it links to. It is
 the revenue layer. Nothing that a sibling specification needs may live here,
 and nothing here may redefine one — `agent/1`, `delegation/1` and
@@ -18,35 +18,19 @@ a designed-only stage says so in its body (`verified: false`,
 `evaluated: false`, `status: not_implemented`). Do not change a label to
 `implemented` without the code and a test that proves it.
 
-## Licence — and an UNRESOLVED decision a human must take
+## Licence: proprietary, decided
 
-> **⚠️ OPEN DECISION, NOT A SETTLED FACT.** This repository is now internally
-> consistent with the estate authority: the register in flashyos
-> `tools/estate-licences.mjs` names it **Apache-2.0, holder Flashy Labs**, so
-> the tree carries the canonical Apache-2.0 `LICENSE` and the README declares
-> it. `test/repo.test.mjs` pins that.
->
-> **But that authority contradicts the product intent, and no human has
-> reconciled them.** Bastion is a *commercial, "private-intended" product* —
-> the revenue layer, "meant to stay private" — and yet the GitHub repository
-> was **measured public on 2026-09-28**, and an Apache-2.0 licence on a public
-> repo is an *irrevocable open grant to anyone who reads it*. You cannot both
-> sell an implementation as the private revenue layer and hand it out under
-> Apache-2.0 in public. One of these is wrong, and an agent must not pick:
->
-> - **Keep Apache-2.0 / public** — accept that the gateway implementation is
->   open source, as the register currently says. Then delete the
->   "private-intended / meant to stay private" language from README, CLAUDE.md
->   and stack.json's `x-note`, because it is no longer true.
-> - **Keep it commercial / private** — then this repo should be **removed from
->   the Apache-2.0 line in the estate register** and the **GitHub repository
->   flipped to private**. The register, not this file, is where that licence
->   decision is unmade.
->
-> This agent did **not** flip repository visibility (it cannot) and did **not**
-> change the register (the house rule forbids deciding a licence inside the
-> repo). It only made the tree agree with the current register. The
-> public-vs-commercial tension is left loud on purpose for a human to settle.
+Decided 2026-10-28 by the owner: Bastion is the commercial layer, so the implementation is
+proprietary and private, and the specs it implements (`agent/1`, `delegation/1`,
+`pay-policy/1`) stay open in their own repositories. The register in flashyos
+(`estate.register.json`, read by `tools/estate-licences.mjs`) says
+**proprietary, holder Agente Labs**, and `LICENSE` here is the matching all-rights-reserved
+statement. The licence is still not decided in this repository: change the register and
+this follows.
+
+While the repository was public it carried an Apache-2.0 grant. Anything copied in that
+window keeps that grant; nothing built after it does. Flipping the GitHub visibility to
+private is a settings change only the owner can make, and is not done by this file.
 
 ## What makes this repository different
 
@@ -136,8 +120,8 @@ npm start       # node src/server.mjs examples/operator.config.json  (PORT, HOST
 - **No dependencies, ESM, Node 22, no install in CI, and a LICENSE that
   matches the register.** `package.json` stays `private: true` (an npm-publish
   flag, not a statement about GitHub visibility); the tree carries the
-  canonical Apache-2.0 `LICENSE` naming Flashy Labs, because the estate
-  register decided that (see *Licence* below); CI installs nothing.
+  all-rights-reserved `LICENSE` naming Agente Labs, because the estate
+  register decided that (see *Licence* above); CI installs nothing.
   `test/repo.test.mjs` reads `package.json`, the tree and
   `.github/workflows/ci.yml`.
 - **The example is fictional and says so.** Hosts stay on `.example`; the
@@ -154,8 +138,8 @@ npm start       # node src/server.mjs examples/operator.config.json  (PORT, HOST
   re-vendor.
 - Add a package. `node:` builtins only; the lint refuses any other specifier.
 - Put a real company, person, domain or price in an example or a test.
-- Decide the licence *here*. It is Apache-2.0, holder Flashy Labs, because
-  `tools/estate-licences.mjs` in flashyos says so; the `LICENSE` in this tree
+- Decide the licence *here*. It is proprietary, holder Agente Labs, because
+  the flashyos register says so; the `LICENSE` in this tree
   is a copy made to match that register, not a decision taken in this repo.
   Do not change it to anything else here — change the register.
 - Turn a `designed` or `not_implemented` label green without the code and

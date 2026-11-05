@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const readme = readFileSync(join(ROOT, 'README.md'), 'utf8');
 
-const LICENCE_LINE = 'Licensed under Apache-2.0 (holder Flashy Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.';
+const LICENCE_LINE = 'All rights reserved (holder Agente Labs); the estate register in flashyos `tools/estate-licences.mjs` is the authority.';
 
 test('the H1 is the first line', () => {
   assert.ok(readme.startsWith('# Bastion'), 'the H1 must be the first line');
@@ -30,13 +30,13 @@ test('the README documents where the product sits in the stack', () => {
   assert.ok(readme.includes('scripts/build-site.mjs'), 'the front-door section must name the generator');
 });
 
-test('the README carries the private-intended visibility and a dated status', () => {
-  assert.ok(readme.includes('Visibility: private-intended'), 'a product-front-door README must state its intended visibility');
+test('the README carries the private visibility and a dated status', () => {
+  assert.ok(readme.includes('Visibility: private.'), 'a product-front-door README must state its visibility');
   assert.ok(readme.includes('Status: v0 skeleton, in design'), 'the v0 status must remain');
   assert.match(readme, /^Status:.*\b\d{4}-\d{2}-\d{2}\b/m, 'the status line must carry a measured date');
 });
 
-test('the Apache-2.0 licence line is the last line, exactly once', () => {
+test('the licence line is the last line, exactly once', () => {
   assert.equal(readme.split(LICENCE_LINE).length - 1, 1, 'the licence line must appear exactly once');
-  assert.equal(readme.trimEnd().split('\n').at(-1), LICENCE_LINE, 'the Apache-2.0 licence line must be the last line');
+  assert.equal(readme.trimEnd().split('\n').at(-1), LICENCE_LINE, 'the licence line must be the last line');
 });
